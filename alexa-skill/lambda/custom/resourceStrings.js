@@ -168,6 +168,17 @@ const resourceStrings = {
             FLIGHT_DESTINATION_ASK:`
                 Where would you like to fly to?`,    
                 
+            FLIGHT_PAST:`
+                <p>Are you a Terminator?</p>
+                <p>If not, I dont think you can travel to past.</p>`,
+
+            FLIGHT_RETURN_PAST:`
+                <p>You can not go back before you go, do you agree?</p>`,    
+
+            FLIGHT_DESTINATION_SAME_CITY_ELICIT:`
+                <p>I got confused, you said the same city you are departing.</p>
+                <p>Please, confirm where would you like to fly to?</p>`,
+                
             FLIGHT_DESTINATION_ELICIT:`
                 Okay, where would you like to fly to?`,
                 
