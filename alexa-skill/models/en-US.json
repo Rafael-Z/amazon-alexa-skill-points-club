@@ -52,6 +52,29 @@
                 "value": "Verizon",
                 "synonyms": []
               }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "B & H",
+                "synonyms": [
+                  "B and H"
+                ]
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Best Buy",
+                "synonyms": []
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Gap",
+                "synonyms": []
+              }
             }
           ]
         }
@@ -64,7 +87,10 @@
             "how can i accumulate points",
             "how to accumulate points",
             "how to earn points",
-            "i want to receive points"
+            "i want to receive points",
+            "tell me tips to earn points",
+            "tell me tips to receive points",
+            "tell me tips to get points"
           ],
           "slots": []
         },
@@ -103,9 +129,10 @@
             "When will I receive my purchase",
             "When will I receive my order",
             "Is my order coming",
-            "How is my order",
+            "How about my last order",
             "My last order is late",
-            "When will I receive my product"
+            "When will I receive my product",
+            "list my last orders"
           ],
           "slots": []
         },
@@ -114,7 +141,8 @@
           "samples": [
             "What is my balance",
             "How many points do I have",
-            "How many points do I own"
+            "How many points do I own",
+            "do i have points"
           ],
           "slots": []
         },
@@ -176,10 +204,11 @@
             "do I get points buying at {partner}",
             "am i going to get points buying at {partner}",
             "do i receive points buying at {partner}",
-            "{partner} give me points when i buy there",
+            "{partner} gives me points when i buy there",
             "is {partner} a accrual partner",
             "do i get point of {partner}",
-            "{partner} gives me points"
+            "{partner} gives me points",
+            "do i get point from {partner}"
           ],
           "slots": [
             {
@@ -223,7 +252,13 @@
             "i want a flight ticket to {destination}",
             "i want a flight ticket to {destination} on {date}",
             "a flight ticket",
-            "flight ticket"
+            "flight ticket",
+            "i want to travel from {origin} to {destination} on {date} returning on {returningDate}",
+            "i want to travel from {origin} to {destination}",
+            "i want to fly from {origin} to {destination} on {date} returning on {returningDate}",
+            "i want to fly from {origin} to {destination}",
+            "i wanna go to {destination}",
+            "i wanna go to {destination} on {date}"
           ],
           "slots": [
             {
@@ -282,10 +317,11 @@
         {
           "name": "useVoucher",
           "samples": [
-            "i have a voucher",
-            "i want to use a voucher",
-            "credit voucher {voucher} ",
-            "put voucher {voucher} in my account"
+            "i have a coupon",
+            "i want to use a coupon",
+            "credit coupon {voucher} ",
+            "put coupon {voucher} in my account",
+            "credit my coupon {voucher}"
           ],
           "slots": [
             {
@@ -334,7 +370,7 @@
         "variations": [
           {
             "type": "PlainText",
-            "value": "Please say your voucher code, letter by letter"
+            "value": "Please say your coupon code, letter by letter"
           }
         ]
       }
