@@ -63,6 +63,7 @@ So, Points Club will not be able to establish a conversation.
 
 ## Flights
 
+Skill is able to identify USA cities only.
 There are flights from/to the following cities:
 
 * DETROIT
@@ -72,6 +73,18 @@ There are flights from/to the following cities:
 * CHICAGO
 * SEATTLE
 
+## Partners
+
+Current partners:
+
+* Jet Blue
+* Delta
+* Virgin
+* Amazon
+* Walmart
+* Verizon
+* Gap
+* Best Buy
 
 ## Implementation details
 
