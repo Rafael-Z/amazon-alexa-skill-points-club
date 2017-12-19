@@ -213,7 +213,14 @@ handlers.push(Alexa.CreateStateHandler(STATES.REDEEM_FLIGHT_TICKET, {
     'AMAZON.CancelIntent': function () {
         this.handler.state = ''
         this.emit(':ask',  this.t('ANYTHING_ELSE'))
-    }
+    },
+    
+    'Unhandled': function () {
+        this.handler.state = ''
+        //fallback to default handler
+        this.emit(this.event.request.intent.name)
+    }    
+
 }))
 
 module.exports = handlers

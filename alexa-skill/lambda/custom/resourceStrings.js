@@ -219,8 +219,8 @@ const resourceStrings = {
                 I am sorry but I could not find your coupon.`,
 
             SPECIAL_OFFERS_FOUND:`
-                <p>I have found special offers for you!</p>
-                <p>I just sent them to your email.</p>
+                <p>I have a special offer today!</p>
+                <p>I just sent it to your email.</p>
                 <p><say-as interpret-as="interjection">Check it out!</say-as></p>`,
                 
             DETAIL_BALANCE:`
