@@ -4,6 +4,7 @@ const Alexa = require('alexa-sdk')
 const api = require('../api')
 const STATES = require('../states')
 const moment = require('moment')
+const du = require('./../dateUtils')
 
 const handlers = []
 
@@ -99,7 +100,7 @@ handlers.push(Alexa.CreateStateHandler(STATES.REDEEM_FLIGHT_TICKET, {
                 const speech = this.t('FLIGHT_DATE_ASK')
                 this.emit(':elicitSlot', 'date', speech, speech)
             }else if (slots.date.confirmationStatus !== 'DENIED') {
-                if(moment().startOf('day').diff(moment(slots.date.value).startOf('day')) > 1){
+                if(du.daysFromNow(slots.date.value) < -1){
                     let speech = this.t('FLIGHT_PAST') + this.t('FLIGHT_DATE_ELICIT')
                     this.emit(':elicitSlot', 'date', speech, speech)
                 }else{
