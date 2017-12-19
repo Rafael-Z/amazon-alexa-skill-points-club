@@ -73,6 +73,7 @@ There are flights from/to the following cities:
 * CHICAGO
 * SEATTLE
 
+
 ## Partners
 
 Current partners:
@@ -85,6 +86,19 @@ Current partners:
 * Verizon
 * Gap
 * Best Buy
+
+
+## Coupons
+
+Valid coupons:
+
+* 12345
+* 23456
+* 34567
+* 45678
+* 56789
+* 67890
+
 
 ## Implementation details
 
