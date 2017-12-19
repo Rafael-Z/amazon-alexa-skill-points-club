@@ -43,7 +43,7 @@ exports.postFacebook = function(accessToken, text){
     return new Promise((resolve, reject) => {
         FB.setAccessToken(accessToken)
     
-        FB.api('me/feed', 'post', { message: text, privacy:'SELF'}, (res) => {
+        FB.api('me/feed', 'post', { message: text, privacy: {value: 'SELF'}}, (res) => {
             if(!res || res.error) {
                 console.log(!res ? 'error occurred' : res.error)
                 reject()

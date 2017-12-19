@@ -99,7 +99,7 @@ handlers.push(Alexa.CreateStateHandler(STATES.REDEEM_FLIGHT_TICKET, {
                 const speech = this.t('FLIGHT_DATE_ASK')
                 this.emit(':elicitSlot', 'date', speech, speech)
             }else if (slots.date.confirmationStatus !== 'DENIED') {
-                if(moment().diff(moment(slots.date.value)) < 0){
+                if(moment().subtract(1, 'days').startOf('day').diff(moment(slots.date.value).startOf('day')) >= 0){
                     let speech = this.t('FLIGHT_PAST') + this.t('FLIGHT_DATE_ELICIT')
                     this.emit(':elicitSlot', 'date', speech, speech)
                 }else{
@@ -120,7 +120,7 @@ handlers.push(Alexa.CreateStateHandler(STATES.REDEEM_FLIGHT_TICKET, {
                 let speech = this.t('FLIGHT_RETURN_TICKET_ASK', slots.origin.value)
                 this.emit(':elicitSlot', 'returningDate', speech, speech)
             }else if (slots.returningDate.confirmationStatus !== 'DENIED') {
-                if(moment(slots.returningDate.value).diff(moment(slots.date.value)) < 0){
+                if(moment(slots.returningDate.value).startOf('day').diff(moment(slots.returningDate.value).startOf('day')) > 0){
                     let speech = this.t('FLIGHT_RETURN_PAST') + this.t('FLIGHT_DATE_ELICIT')
                     this.emit(':elicitSlot', 'date', speech, speech)
                 }else{
