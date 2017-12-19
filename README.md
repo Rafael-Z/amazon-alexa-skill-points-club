@@ -61,6 +61,17 @@ Switch between members to test all scenarios. To do that:
 Important: at this point, any other user will not be registered on Points Club database. 
 So, Points Club will not be able to establish a conversation.
 
+## Flights
+
+There are flights from/to the following cities:
+
+* DETROIT
+* MIAMI
+* BOSTON
+* NEW YORK
+* CHICAGO
+* SEATTLE
+
 
 ## Implementation details
 
