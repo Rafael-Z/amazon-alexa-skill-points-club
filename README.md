@@ -21,7 +21,7 @@ At Points Club members receive points when buying on partner companies. Points c
 | What can I buy?                           | Explain what can be bought, and asks the member to choose                |
 | Any good offers today?                    | Confirm and send the offers to the member                                |
 | Which product can I buy with 1000 points? | Send offer links to the member                                           |
-| Credit my coupon '1' '2' '3' '4' '5'      | Make a credit to member's account and says how many points was credited  |
+| I want to use a coupon                    | Ask coupon code, make a credit to member's account, and says how many points was credited  |
 | I wanna travel to New York tomorrow       | Guide member through searching a flight ticket, inform price and availability, send the details to member's Facebook, and generate a lead to further phone contact |
 
 \* right after listening its balance.
