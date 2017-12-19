@@ -190,9 +190,6 @@ Promise.all([
     }),
     createPartner('Best Buy', true, true).then(id =>{
         return id
-    }),
-    createPartner('B & H', true, true).then(id =>{
-        return id
     })
 ]).then(partnerIds => {
     return Promise.all([
