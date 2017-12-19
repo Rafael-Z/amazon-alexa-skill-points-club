@@ -1,0 +1,11 @@
+{
+  "name": "points-club-backend",
+  "version": "1.0.0",
+  "description": "My Graphcool Service",
+  "devDependencies": {
+    "apollo-client-preset": "^1.0.5",
+    "graphql": "^0.12.0",
+    "graphql-tag": "^2.6.0",
+    "node-fetch": "^1.7.3"
+  }
+}

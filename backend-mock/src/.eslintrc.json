@@ -1,0 +1,22 @@
+{
+    "extends": "eslint:recommended",
+    "env": {
+        "browser": false,
+        "commonjs": true,
+        "es6": true,
+        "node": true,
+        "mocha": true
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "rules": {
+        "indent": ["error", 4],
+        "quotes": ["error", "single"],
+        "semi": ["error", "never"],
+        "no-console": 0
+    }
+}

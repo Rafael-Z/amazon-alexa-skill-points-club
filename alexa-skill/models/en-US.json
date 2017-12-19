@@ -1,0 +1,411 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "types": [
+        {
+          "name": "ACCRUAL_PARTNERS",
+          "values": [
+            {
+              "id": "JetBlue",
+              "name": {
+                "value": "Jet Blue",
+                "synonyms": [
+                  "Jet Blue Airlines"
+                ]
+              }
+            },
+            {
+              "id": "Delta",
+              "name": {
+                "value": "Delta",
+                "synonyms": [
+                  "Delta Airlines"
+                ]
+              }
+            },
+            {
+              "id": "Virgin",
+              "name": {
+                "value": "Virgin",
+                "synonyms": [
+                  "Virgin Airlines"
+                ]
+              }
+            },
+            {
+              "id": "Amazon",
+              "name": {
+                "value": "Amazon",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "Walmart",
+              "name": {
+                "value": "Walmart",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "Verizon",
+              "name": {
+                "value": "Verizon",
+                "synonyms": []
+              }
+            }
+          ]
+        }
+      ],
+      "intents": [
+        {
+          "name": "AccrualTips",
+          "samples": [
+            "how can i earn points",
+            "how can i accumulate points",
+            "how to accumulate points",
+            "how to earn points",
+            "i want to receive points"
+          ],
+          "slots": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "ChangeUser",
+          "samples": [
+            "I am member id {memberId}",
+            "my member id is {memberId}",
+            "i am member {memberId}",
+            "i am member number {memberId}"
+          ],
+          "slots": [
+            {
+              "name": "memberId",
+              "type": "AMAZON.NUMBER"
+            }
+          ]
+        },
+        {
+          "name": "CheckRecentOrderStatus",
+          "samples": [
+            "What is the status of my last purchase",
+            "What is the status of my last order",
+            "When will I receive my purchase",
+            "When will I receive my order",
+            "Is my order coming",
+            "How is my order",
+            "My last order is late",
+            "When will I receive my product"
+          ],
+          "slots": []
+        },
+        {
+          "name": "GetBalance",
+          "samples": [
+            "What is my balance",
+            "How many points do I have",
+            "How many points do I own"
+          ],
+          "slots": []
+        },
+        {
+          "name": "GetExpiringPoints",
+          "samples": [
+            "Do I have points expiring soon",
+            "I'm going to lose points soon",
+            "How many points of mine will expire",
+            "Do I have points nearing expiration",
+            "Is there any points becoming void soon",
+            "Does any point become void any time soon",
+            "am i losing any points soon",
+            "Do I have points close to expiration"
+          ],
+          "slots": []
+        },
+        {
+          "name": "GetRedeemOffers",
+          "samples": [
+            "Do you have any promotion for me",
+            "Do you have any offer for me",
+            "any good offers today",
+            "any good promotions today"
+          ],
+          "slots": []
+        },
+        {
+          "name": "GetRedeemOptions",
+          "samples": [
+            "What can I buy",
+            "I want to redeem something",
+            "I want to redeem something up to {points} points.",
+            "What can I buy with {points} points.",
+            "i want to buy something",
+            "what can i do with my points",
+            "i want a reward"
+          ],
+          "slots": [
+            {
+              "name": "points",
+              "type": "AMAZON.NUMBER"
+            }
+          ]
+        },
+        {
+          "name": "GetRedeemOptionsForInfoPoints",
+          "samples": [
+            "What can I do with then",
+            "What can I buy with them",
+            "What can I redeem with them",
+            "so what can i get"
+          ],
+          "slots": []
+        },
+        {
+          "name": "IsAccrualPartner",
+          "samples": [
+            "do I get points buying at {partner}",
+            "am i going to get points buying at {partner}",
+            "do i receive points buying at {partner}",
+            "{partner} give me points when i buy there",
+            "is {partner} a accrual partner",
+            "do i get point of {partner}",
+            "{partner} gives me points"
+          ],
+          "slots": [
+            {
+              "name": "partner",
+              "type": "ACCRUAL_PARTNERS"
+            }
+          ]
+        },
+        {
+          "name": "ListLastTransactions",
+          "samples": [
+            "What were my last transactions",
+            "List my last transactions"
+          ],
+          "slots": []
+        },
+        {
+          "name": "MoreDetails",
+          "samples": [
+            "tell me more details",
+            "tell me more about that",
+            "give me more information",
+            "be more specific",
+            "give me more details",
+            "explain this better"
+          ],
+          "slots": []
+        },
+        {
+          "name": "RedeemFlightTicket",
+          "samples": [
+            "I want to travel",
+            "I want a flight ticket",
+            "i want to fly",
+            "i want to travel to {destination} on {date} returning on {returningDate}",
+            "i want to travel to {destination} on {date}",
+            "i want to travel to {destination} {date}",
+            "i want a ticket",
+            "i wanna a ticket",
+            "i wanna travel",
+            "i want a flight ticket to {destination}",
+            "i want a flight ticket to {destination} on {date}",
+            "a flight ticket",
+            "flight ticket"
+          ],
+          "slots": [
+            {
+              "name": "destination",
+              "type": "AMAZON.US_CITY",
+              "samples": [
+                "i want to go to {destination}",
+                "{destination}",
+                "i am going to {destination}"
+              ]
+            },
+            {
+              "name": "date",
+              "type": "AMAZON.DATE",
+              "samples": [
+                "on {date}",
+                "{date}",
+                "on {date} returning {returningDate}"
+              ]
+            },
+            {
+              "name": "returningDate",
+              "type": "AMAZON.DATE"
+            },
+            {
+              "name": "origin",
+              "type": "AMAZON.US_CITY",
+              "samples": [
+                "{origin}",
+                "from {origin}",
+                "i am leaving {origin}",
+                "i am at {origin}"
+              ]
+            },
+            {
+              "name": "returnTicket",
+              "type": "AMAZON.NUMBER"
+            }
+          ]
+        },
+        {
+          "name": "RedeemProduct",
+          "samples": [
+            "i want to buy a product",
+            "What product can I buy with {points} points.",
+            "a product",
+            "product"
+          ],
+          "slots": [
+            {
+              "name": "points",
+              "type": "AMAZON.NUMBER"
+            }
+          ]
+        },
+        {
+          "name": "useVoucher",
+          "samples": [
+            "i have a voucher",
+            "i want to use a voucher",
+            "credit voucher {voucher} ",
+            "put voucher {voucher} in my account"
+          ],
+          "slots": [
+            {
+              "name": "voucher",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "it is {voucher}",
+                "{voucher}"
+              ]
+            }
+          ]
+        }
+      ],
+      "invocationName": "points club"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Intent-RedeemFlightTicket.IntentSlot-destination",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "which destination are you interested in?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Intent-RedeemFlightTicket.IntentSlot-date",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "When are you planning to travel?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Intent-RedeemFlightTicket.IntentSlot-origin",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Where would you like to fly from?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Intent-useVoucher.IntentSlot-voucher",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please say your voucher code, letter by letter"
+          }
+        ]
+      }
+    ],
+    "dialog": {
+      "intents": [
+        {
+          "name": "RedeemFlightTicket",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "destination",
+              "type": "AMAZON.US_CITY",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Intent-RedeemFlightTicket.IntentSlot-destination"
+              }
+            },
+            {
+              "name": "date",
+              "type": "AMAZON.DATE",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Intent-RedeemFlightTicket.IntentSlot-date"
+              }
+            },
+            {
+              "name": "returningDate",
+              "type": "AMAZON.DATE",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "origin",
+              "type": "AMAZON.US_CITY",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Intent-RedeemFlightTicket.IntentSlot-origin"
+              }
+            },
+            {
+              "name": "returnTicket",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ]
+        },
+        {
+          "name": "useVoucher",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "voucher",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Intent-useVoucher.IntentSlot-voucher"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

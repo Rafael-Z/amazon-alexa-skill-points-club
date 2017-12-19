@@ -1,0 +1,46 @@
+{
+  "skillManifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Skill for a fictional loyalty company called Points Club.",
+          "examplePhrases": [
+            "Alexa open Points Club",
+            "Alexa ask Points Clube what my balance is",
+            "Alexa ask Points Clube the status of my last order"
+          ],
+          "name": "Points Club",
+          "smallIconUri": "https://api.amazonalexa.com/v0/skills/amzn1.ask.skill.6ee93ab7-cbb5-4440-b83b-db1fe7700374/images/eyJkIjoiYVhBT0hWRnJ0U0RHNFpNeHREZkplNDhVU0lZRmdrMGhXRU8wRzBXNDRLV1I0RXBhQXlpWHppSDhTYmpBek5yQ0Z6ekpucGczU2xBdHU4dGpXRTJNWUxBakZRTklnenBYSVZjYkpvejltaWFudWhKZU5BU1NmL0ptUjV0bEhIcVciLCJpdiI6IjBkZUFMdEwrdmVlcCtXN3JZR0VHS2c9PSIsInYiOjF9",
+          "description": "Skill for a fictional loyalty company called Points Club.",
+          "largeIconUri": "https://api.amazonalexa.com/v0/skills/amzn1.ask.skill.6ee93ab7-cbb5-4440-b83b-db1fe7700374/images/eyJkIjoiTW9WRDZFYmpCcWUrMGE5TmxTOFFKR2lkZ3RsdisrVkZSekdsQjAzWVBtd0FGTExVeWJXakExVzhkeWR3TFNtVXEzSlE0WXF5Z0llT09ObVZaVk1QK1pvUXJaNTNNWTdWaWxmQXU0Y0tQMno2bEtyV09Tb0lEMXNUYXpQeTBuT0pBTmw4SHhkOTcveUFEb3Zqa3l5NXFnPT0iLCJpdiI6Ii9EUU93dkU0Umh6bks5MkVRdjRPMHc9PSIsInYiOjF9"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "This skill uses Facebook for authentication.\nMember information is queried online in a remote REST API.\n\nhttps://raw.githubusercontent.com/Rafael-Z/points-club/master/member/\n\nCurrently, this API is a mock (static values for test purposes only).",
+      "category": "SHOPPING",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "lambda\\custom"
+        },
+        "regions": {
+          "NA": {
+            "endpoint": {
+              "sourceDir": "lambda\\custom"
+            }
+          }
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}

@@ -1,0 +1,74 @@
+# The following types define the data model of the example service
+# based on which the GraphQL API is generated
+
+type Member @model {
+  id: ID! @isUnique
+  memberId: String! @isUnique
+  name: String!
+  fullname: String!
+  email: String!
+  balance: Int!
+  address: Address! @relation(name: "MemberOnAddress")
+  transactions: [Transaction!]! @relation(name: "MemberOnTransaction")
+  orders: [Order!]! @relation(name: "MemberOnOrder")
+}
+
+type Address @model {
+  id: ID! @isUnique
+  member: Member! @relation(name: "MemberOnAddress")
+  city: String!  
+}
+
+type Transaction @model {
+  id: ID! @isUnique
+  member: Member! @relation(name: "MemberOnTransaction")
+  type: TransactionType!
+  points: Int!
+  date: DateTime!
+  expDate: DateTime
+  partner: Partner! @relation(name: "PartnerOnTransaction")
+}
+
+type Order @model {
+  id: ID! @isUnique
+  member: Member! @relation(name: "MemberOnOrder")
+  status: OrderStatus!
+  estimatedDeliveryDate: String!
+  product: String!
+  partner: Partner! @relation(name: "PartnerOnOrder")
+}
+
+type Partner @model {
+  id: ID! @isUnique
+  name: String!
+  accrual: Boolean!
+  redeem: Boolean!
+  orders: [Order!]! @relation(name: "PartnerOnOrder")
+  transactions:  [Transaction!]! @relation(name: "PartnerOnTransaction")
+}
+
+type Voucher @model {
+  id: ID! @isUnique
+  code: Int!
+  value: Int!  
+}
+
+type Flight @model {
+  id: ID! @isUnique
+  origin: String!
+  destination: String!
+  departureTime: String!
+  price: Int!
+}
+
+enum TransactionType {
+  REDEEM
+  ACCRUAL
+}
+
+enum OrderStatus {
+  PROCESSING,
+  DELIVERING,
+  REJECTED,
+  CLOSED
+}

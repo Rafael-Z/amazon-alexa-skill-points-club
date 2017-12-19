@@ -1,0 +1,26 @@
+{
+  "deploy_settings": {
+    "default": {
+      "skill_id": "amzn1.ask.skill.6ee93ab7-cbb5-4440-b83b-db1fe7700374",
+      "was_cloned": false,
+      "merge": {
+        "skillManifest": {
+          "apis": {
+            "custom": {
+              "endpoint": {
+                "uri": "arn:aws:lambda:us-east-1:175207808087:function:PointsClubSkill"
+              },
+              "regions": {
+                "NA": {
+                  "endpoint": {
+                    "uri": "arn:aws:lambda:us-east-1:175207808087:function:PointsClubSkill"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
